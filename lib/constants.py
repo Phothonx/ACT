@@ -1,0 +1,5 @@
+HEIGHT = 128 # pixels
+WIDTH = 128
+
+TILES_WIDTH = 8 # pixels
+TILES_HEIGHT = 8
