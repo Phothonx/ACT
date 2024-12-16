@@ -1,24 +1,21 @@
 import pyxel
-from ..constants import TILES_WIDTH, TILES_HEIGHT
+from ..config import WIDTH_T, HEIGHT_T, TILES_W, TILES_H
 
 class Grid():
-  HEIGHT = 16 # tiles
-  WIDTH = 16
-
   def __init__(self):
     pass
 
   def draw(self):
-   for x in range(self.WIDTH):
-     for y in range(self.HEIGHT):
+   for x in range(WIDTH_T):
+     for y in range(HEIGHT_T):
        pyxel.bltm(
-         x*TILES_WIDTH,
-         y*TILES_HEIGHT,
+         x*TILES_W,
+         y*TILES_H,
          0,
-         x*TILES_WIDTH,
-         y*TILES_HEIGHT,
-         TILES_WIDTH,
-         TILES_HEIGHT
+         x*TILES_W,
+         y*TILES_H,
+         TILES_W,
+         TILES_H
        )
 
 grid = Grid()
