@@ -8,30 +8,30 @@
 # Agent de Corruption temporel #
 
 import pyxel
-from lib.config import TITLE, WIDTH_P, HEIGHT_P
-from lib.ui.grid import grid
-from lib.selection.cursor import cursor
-from lib.turn.turn import turn
+from python.const import TITLE, WIDTH_PIXELS, HEIGHT_PIXELS
+from python.selection.cursor import Cursor
+from python.game.game import Game
 
 class App:
-  def __init__(self):
-    pyxel.init(WIDTH_P, HEIGHT_P, title=TITLE)
+
+  def __init__(self) -> None:
+    pyxel.init(WIDTH_PIXELS, HEIGHT_PIXELS, title=TITLE)
     pyxel.load("ressources/game.pyxres")
     pyxel.mouse(True)
+    self.cursor = Cursor()
+    self.game = Game(self.cursor)
 
-    pyxel.run(self.update, self.draw)
+  def run(self):
+    pyxel.run(self.__update, self.__draw)
 
-  def update(self):
+  def __update(self):
     if pyxel.btnp(pyxel.KEY_Q):
       pyxel.quit()
-    turn.update()
-    print(len(turn.pawns[0]))
+    self.game.update()
 
-  def draw(self):
-    grid.draw()
-    cursor.highlight_selected_tile()
-    turn.draw_pawns()
-    turn.draw_mvts()
+  def __draw(self):
+    self.game.draw()
 
-
-App()
+if __name__ == "__main__":
+  client = App()
+  client.run()

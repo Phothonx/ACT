@@ -14,7 +14,6 @@ class Turn():
       self.play_round()
     self.play_turn()
 
-
   def draw_pawns(self):
     for player in [0, 1]:
       for pawn in self.pawns[player]:
