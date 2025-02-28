@@ -15,11 +15,12 @@ from python.game.game import Game
 class App:
 
   def __init__(self) -> None:
+    print("[] Création du jeu...")
     pyxel.init(WIDTH_PIXELS, HEIGHT_PIXELS, title=TITLE)
     pyxel.load("ressources/game.pyxres")
     pyxel.mouse(True)
     self.cursor = Cursor()
-    self.game = Game(self.cursor)
+    self.game = Game()
 
   def run(self):
     pyxel.run(self.__update, self.__draw)
@@ -33,5 +34,13 @@ class App:
     self.game.draw()
 
 if __name__ == "__main__":
+  print('''
+-----------------------------------
+ ▄▀█ █▀▀ ▀█▀
+ █▀█ █▄▄ ░█░
+Agent de corruption temporel
+-----------------------------------
+''')
   client = App()
+  print("[] Lancement du jeu...")
   client.run()

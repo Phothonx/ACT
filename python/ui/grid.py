@@ -14,3 +14,5 @@ class Grid():
          TILES_WIDTH,
          TILES_HEIGHT
        )
+
+grid = Grid()

@@ -20,3 +20,5 @@ class Cursor():
        TILES_HEIGHT,
        0
     )
+
+cursor = Cursor()
