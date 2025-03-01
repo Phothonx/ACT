@@ -6,24 +6,24 @@ C'est un jeu concept permettant de jouer de manière non linéaire dans le temps
 
 
 #### TODO
--[] UI
-    -[] pions surlignent leur prochain déplacement
-    -[] indiquer le tour d'introduction d'un pion ?
+- [ ] UI
+    - [ ] pions surlignent leur prochain déplacement
+    - [ ] indiquer le tour d'introduction d'un pion ?
 
--[] GAME
-    -[] collisions
-        -[] mouvements
-        -[] spawn
-    -[] attaque
-    -[] mort et ressucité
-    -[] temporiser les tours et les actions
-    -[] déplacement diagonale ?
-    -[] nouveaux pions ?
-        -[] mage, attaque puissante de zone, du temps à charger
+- [ ] GAME
+    - [ ] collisions
+        - [ ] mouvements
+        - [ ] spawn
+    - [ ] attaque
+    - [ ] mort et ressucité
+    - [ ] temporiser les tours et les actions
+    - [ ] déplacement diagonale ?
+    - [ ] nouveaux pions ?
+        - [ ] mage, attaque puissante de zone, du temps à charger
 
--[] GRAPHICS
-    -[] couleurs custom
-    -[] meilleur modèle de soldat
-    -[] modèle de case (plutot herbe ?)
-    -[] animations statiques pour les pions
-    -[] animations/effets lors d'un nouveau round
+- [ ] GRAPHICS
+    - [ ] couleurs custom
+    - [ ] meilleur modèle de soldat
+    - [ ] modèle de case (plutot herbe ?)
+    - [ ] animations statiques pour les pions
+    - [ ] animations/effets lors d'un nouveau round
