@@ -1,11 +1,11 @@
 from ..ui.grid import grid
 from .player import players
 from ..pawns.soldier import Soldier
-from ..const import NB_ROUNDS, NB_TURNS
+from ..const import NB_ROUNDS, NB_TURNS, HEIGHT
 
 
 def spawnPos(round, player_id):
-  return (0, 7+round) if player_id == 0 else (15, 7+round)
+  return (0, round) if player_id == 0 else (HEIGHT - 1, round)
 
 
 class Game():

@@ -1,5 +1,6 @@
 import pyxel
 from ..const import TILES_WIDTH, TILES_HEIGHT
+from ..sprites import SOLDAT_P0, SOLDAT_P1, HIGHLIGHT_MVT, HIGHLIGHT_NEXT_MVT
 from ..lib import addt
 from ..selection.cursor import cursor
 
@@ -11,14 +12,12 @@ class Pawnstate:
 
 class Pawn:
   MAX_LIFE = 100
-  SPRITE_P0 = (16, 0)
-  SPRITE_P1 = (24, 0)
 
   def __init__(self, spawn, owner):
     self.owner = owner
     spawn_state = Pawnstate(self.MAX_LIFE, spawn)
     self.state = [ spawn_state ] # state of the pawn for a certain turn in this array
-    self.sprite = self.SPRITE_P0 if owner.id == 0 else self.SPRITE_P1
+    self.sprite = SOLDAT_P0 if owner.id == 0 else SOLDAT_P1
     # self.pos = spawn # initial position
     # self.life = self.MAX_LIFE
 
@@ -68,8 +67,8 @@ class Pawn:
           hlpos[0]*TILES_WIDTH,
           hlpos[1]*TILES_HEIGHT,
           0,
-          32,
-          0,
+          HIGHLIGHT_MVT[0],
+          HIGHLIGHT_MVT[1],
           TILES_WIDTH,
           TILES_HEIGHT,
           0

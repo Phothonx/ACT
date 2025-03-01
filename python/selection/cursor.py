@@ -1,5 +1,6 @@
 import pyxel
 from ..const import TILES_WIDTH, TILES_HEIGHT
+from ..sprites import HIGHLIGHT_CURSOR
 
 class Cursor():
 
@@ -20,8 +21,8 @@ class Cursor():
        tile_pos[0]*TILES_WIDTH,
        tile_pos[1]*TILES_HEIGHT,
        0,
-       32,
-       0,
+       HIGHLIGHT_CURSOR[0],
+       HIGHLIGHT_CURSOR[1],
        TILES_WIDTH,
        TILES_HEIGHT,
        0

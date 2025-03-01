@@ -1,5 +1,6 @@
 import pyxel
 from ..const import WIDTH, HEIGHT, TILES_WIDTH, TILES_HEIGHT
+from ..sprites import TILEMAP
 
 class Grid():
   def draw(self):
@@ -8,7 +9,7 @@ class Grid():
        pyxel.bltm(
          x*TILES_WIDTH,
          y*TILES_HEIGHT,
-         0,
+         TILEMAP,
          x*TILES_WIDTH,
          y*TILES_HEIGHT,
          TILES_WIDTH,

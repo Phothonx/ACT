@@ -17,7 +17,7 @@ class App:
   def __init__(self) -> None:
     print("[] Création du jeu...")
     pyxel.init(WIDTH_PIXELS, HEIGHT_PIXELS, title=TITLE)
-    pyxel.load("ressources/game.pyxres")
+    pyxel.load("ressources/game16b.pyxres")
     pyxel.mouse(True)
     self.game = Game()
 
