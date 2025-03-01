@@ -9,8 +9,8 @@
 
 import pyxel
 from python.const import TITLE, WIDTH_PIXELS, HEIGHT_PIXELS
-from python.selection.cursor import Cursor
 from python.game.game import Game
+from python.selection.cursor import cursor
 
 class App:
 
@@ -19,7 +19,6 @@ class App:
     pyxel.init(WIDTH_PIXELS, HEIGHT_PIXELS, title=TITLE)
     pyxel.load("ressources/game.pyxres")
     pyxel.mouse(True)
-    self.cursor = Cursor()
     self.game = Game()
 
   def run(self):
@@ -29,9 +28,11 @@ class App:
     if pyxel.btnp(pyxel.KEY_Q):
       pyxel.quit()
     self.game.update()
+    cursor.updateCursorPos()
 
   def __draw(self):
     self.game.draw()
+    cursor.highlight_selected_tile()
 
 if __name__ == "__main__":
   print('''

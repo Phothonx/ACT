@@ -54,7 +54,7 @@ class Pawn:
     cardinals = [ (0, 1), (1, 0), (0, -1), (-1, 0) ]
     for direction in cardinals:
       clickable = addt(self.state[turn].pos, direction)
-      if cursor.selected_tile() == clickable and pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT):
+      if cursor.getSelectedTile() == clickable and pyxel.btnp(pyxel.MOUSE_BUTTON_LEFT):
         self.move(turn, direction)
         return True
     return False
