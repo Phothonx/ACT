@@ -7,7 +7,7 @@ C'est un jeu concept permettant de jouer de manière non linéaire dans le temps
 
 #### TODO
 - [ ] UI
-    - [ ] pions surlignent leur prochain déplacement
+    - [x] pions surlignent leur prochain déplacement
     - [ ] indiquer le tour d'introduction d'un pion ?
 
 - [ ] GAME
@@ -16,7 +16,8 @@ C'est un jeu concept permettant de jouer de manière non linéaire dans le temps
         - [ ] spawn
     - [ ] attaque
     - [ ] mort et ressucité
-    - [ ] temporiser les tours et les actions
+    - [x] temporiser les rounds
+    - [ ] rejouer les actions dans l'ordre pour les déplacements auto (temporiser)
     - [ ] déplacement diagonale ?
     - [ ] nouveaux pions ?
         - [ ] mage, attaque puissante de zone, du temps à charger

@@ -1,5 +1,5 @@
 import pyxel
-from ..const import TILES_WIDTH, TILES_HEIGHT
+from ..const import TILES_WIDTH, TILES_HEIGHT, NB_TURNS
 from ..sprites import SOLDAT_P0, SOLDAT_P1, HIGHLIGHT_MVT, HIGHLIGHT_NEXT_MVT
 from ..lib import addt
 from ..selection.cursor import cursor
@@ -73,3 +73,19 @@ class Pawn:
           TILES_HEIGHT,
           0
         )
+
+  def highlightNext(self, turn):
+    if len(self.state) <= turn:
+      raise ValueError(f"Etat suivant manquant. Tour {turn}. Joueur {self.owner.id}")
+    if turn != -1 and turn != NB_TURNS:
+      hlpos = self.state[turn + 1].pos
+      pyxel.blt(
+          hlpos[0]*TILES_WIDTH,
+          hlpos[1]*TILES_HEIGHT,
+          0,
+          HIGHLIGHT_NEXT_MVT[0],
+          HIGHLIGHT_NEXT_MVT[1],
+          TILES_WIDTH,
+          TILES_HEIGHT,
+          0
+          )
